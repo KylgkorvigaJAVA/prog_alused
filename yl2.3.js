@@ -16,6 +16,7 @@ rl.question('Sisestage enda vanus: ', vanus => {
                 pulss = 206 - vanus * 0.88    
             }
 
+            
             if (tyyp == 1) {
                 minPulss = pulss * 0.5
                 maxPulss = pulss * 0.7
@@ -26,7 +27,6 @@ rl.question('Sisestage enda vanus: ', vanus => {
                 minPulss = pulss * 0.8
                 maxPulss = pulss * 0.87
             }
-
             console.log(`Pulsisagedus peaks olema vahemikus ${Math.ceil(minPulss)} kuni ${mMath.ceil(maxPulss)}`)
             rl.close()
         })    
