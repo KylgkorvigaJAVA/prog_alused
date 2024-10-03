@@ -7,12 +7,15 @@ const rl = readline.createInterface({
 
 rl.question('Kas soovite istekohta valida ise("ise") või loosida("loos")?: ', istekoht => {
     rl.question('Kas soovite istuda akna ääres("aken") või mitte("muu")?: ', aken => {
-        var message = 'Valisite ise.'
-                
+        var message
+        var istekoht        
         if ((istekoht = 'ise') && (aken = 'aken')) {
-             var istekoht = ' Aknakoht'
-        } else if ((istekoht = 'ise') && (aken = 'muu')) {
-            istekoht = ' Vahekäigukoht'
+             istekoht = ' Aknakoht'
+             message = 'Valisite ise.'
+        }
+        if ((istekoht = 'ise') && (aken = 'muu')) {
+            istekoht = 'Vahekäigukoht'
+            message = 'Valisite ise.'
         }
         console.log(message + istekoht)
         rl.close()
